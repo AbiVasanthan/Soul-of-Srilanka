@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soul of Sri Lanka</title>
+
+  <!-- Bootstrap 5 for layout and basic styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #1a0a00;
+      color: #f5e6c8;
+      font-family: "Lato", sans-serif;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      color: #e8a02a;
+      border-bottom: 2px solid #e8a02a;
+      padding-bottom: 4px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .navbar {
+      background-color: #2c1500;
+    }
+
+    .navbar-brand {
+      font-family: "Playfair Display", serif;
+      color: #e8a02a;
+      font-size: 1.4rem;
+    }
+
+    .navbar-brand:hover {
+      color: #e8a02a;
+    }
+
+    .nav-link {
+      color: #f5e6c8;
+    }
+
+    .nav-link:hover {
+      color: #e8a02a;
+    }
+
+    #theme-bar {
+      background-color: #2c1500;
+      border-bottom: 1px solid #3d1f00;
+      padding: 8px 0;
+      font-size: 0.8rem;
+      color: #a08060;
+    }
+
+    .theme-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      display: inline-block;
+      cursor: pointer;
+      margin: 0 3px;
+    }
+
+    .theme-circle:hover {
+      border-color: white;
+    }
+
+    .theme-circle.active {
+      border-color: white;
+    }
+
+    .hero {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+      background-size: cover;
+      background-position: center;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      color: #e8a02a;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #f5e6c8;
+    }
+
+    #promo-banner {
+      background-color: #3b1800;
+      border: 1px solid #e8a02a;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      color: #e8a02a;
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      display: none;
+      margin-top: 15px;
+    }
+
+    #promo-banner p {
+      font-size: 0.8rem;
+      color: #d4b896;
+      font-family: "Lato", sans-serif;
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+
+    .gallery-card {
+      background-color: #2c1500;
+      border: 1px solid #3d1f00;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .gallery-card:hover {
+      box-shadow: 0 6px 20px rgba(232, 160, 42, 0.3);
+      transform: translateY(-4px);
+      transition: all 0.3s;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .gallery-card .card-body {
+      padding: 12px;
+    }
+
+    .gallery-card .card-title {
+      font-family: "Playfair Display", serif;
+      color: #e8a02a;
+      font-size: 1rem;
+    }
+
+    .gallery-card .card-text {
+      font-size: 0.85rem;
+      color: #d4b896;
+    }
+
+    .new-badge {
+      background-color: #e8a02a;
+      color: #1a0a00;
+      font-size: 0.6rem;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    .sidebar-box {
+      background-color: #2c1500;
+      border: 1px solid #3d1f00;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-box h6 {
+      font-family: "Playfair Display", serif;
+      color: #e8a02a;
+      border-bottom: 1px solid #3d1f00;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .dest-item {
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      color: #d4b896;
+      border: 1px solid transparent;
+    }
+
+    .dest-item:hover {
+      background-color: #3d1f00;
+      color: #f5e6c8;
+    }
+
+    .dest-item.active {
+      background-color: #4a2500;
+      border-color: #e8a02a;
+      color: #e8a02a;
+    }
+
+    #dest-info-box {
+      background-color: #3d1f00;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: #f5e6c8;
+      display: none;
+    }
+
+    .visited-card {
+      background-color: #2c1500;
+      border: 2px solid #3d1f00;
+      border-radius: 8px;
+      padding: 10px 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .visited-card:hover {
+      border-color: #e8a02a;
+    }
+
+    .visit-badge {
+      background-color: #3d1f00;
+      color: #d4b896;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    #visitor-card {
+      background-color: #2c1500;
+      border: 2px solid #3d1f00;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    #visitor-card:hover {
+      background-color: #3d1f00;
+    }
+
+    #visitor-card .name {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      color: #e8a02a;
+    }
+
+    #visitor-card .country {
+      font-size: 0.85rem;
+      color: #d4b896;
+    }
+
+    #event-log {
+      background-color: #1a0a00;
+      border: 1px solid #3d1f00;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.78rem;
+      max-height: 120px;
+      overflow-y: auto;
+      margin-top: 10px;
+      color: #d4b896;
+    }
+
+    .log-entry {
+      padding: 2px 0;
+      border-bottom: 1px solid #2c1500;
+    }
+
+    .log-time {
+      color: #e8a02a;
+      margin-right: 5px;
+    }
+
+    #add-dest-form {
+      background-color: #2c1500;
+      border: 1px solid #3d1f00;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    #add-dest-form input {
+      background-color: #3d1f00;
+      border: 1px solid #5a3000;
+      color: #f5e6c8;
+      border-radius: 6px;
+      padding: 8px 10px;
+      width: 100%;
+    }
+
+    #add-dest-form input::placeholder {
+      color: #a08060;
+    }
+
+    .tip-item {
+      border: 1px solid #3d1f00;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .tip-header {
+      background-color: #2c1500;
+      padding: 12px 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "Playfair Display", serif;
+      color: #f5e6c8;
+      font-size: 0.95rem;
+    }
+
+    .tip-header:hover {
+      background-color: #3d1f00;
+    }
+
+    .tip-arrow {
+      color: #e8a02a;
+    }
+
+    .tip-body {
+      background-color: #1a0a00;
+      padding: 12px 16px;
+      font-size: 0.86rem;
+      color: #d4b896;
+      line-height: 1.7;
+      display: none;
+    }
+    
+    .my-table {
+      color: #f5e6c8;
+      border-color: #3d1f00;
+    }
+
+    .my-table thead th {
+      background-color: #3d1f00;
+      color: #e8a02a;
+      border-color: #5a3000;
+    }
+
+    .my-table tbody tr {
+      background-color: #2c1500;
+      border-color: #3d1f00;
+    }
+
+    .my-table tbody tr:nth-child(even) {
+      background-color: #3d1f00;
+    }
+
+    .my-table tbody tr:hover {
+      background-color: #4a2500;
+    }
+
+    footer {
+      background-color: #2c1500;
+      color: #d4b896;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+    }
+
+    #ajax-section {
+      background-color: #1a0a00;
+      padding: 50px 0;
+    }
+
+    .ajax-panel {
+      background-color: #2c1500;
+      border: 1px solid #3d1f00;
+      border-radius: 10px;
+      padding: 20px;
+      height: 100%;
+    }
+
+    .ajax-panel h5 {
+      font-family: "Playfair Display", serif;
+      color: #e8a02a;
+      border-bottom: 1px solid #3d1f00;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+
+    .ajax-panel p {
+      font-size: 0.82rem;
+      color: #a08060;
+      margin-bottom: 12px;
+    }
+
+    .ajax-panel input,
+    .ajax-panel select {
+      background-color: #3d1f00;
+      border: 1px solid #5a3000;
+      color: #f5e6c8;
+      border-radius: 6px;
+      padding: 8px 10px;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 0.88rem;
+    }
+
+    .ajax-panel input::placeholder {
+      color: #7a5530;
+    }
+
+    .ajax-panel label {
+      font-size: 0.75rem;
+      color: #a08060;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .result-box {
+      background-color: #1a0a00;
+      border: 1px solid #3d1f00;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+      min-height: 70px;
+      font-size: 0.82rem;
+      color: #d4b896;
+    }
+
+    .result-box.ok {
+      border-color: #1a6640;
+      color: #4dbb80;
+    }
+
+    .result-box.fail {
+      border-color: #6b1a1a;
+      color: #ff6666;
+    }
+
+    #del-confirm-box {
+      background-color: #3b0a0a;
+      border: 1px solid #8b1a1a;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+      text-align: center;
+      display: none;
+    }
+
+    #del-confirm-box p {
+      color: #ffaaaa;
+      margin-bottom: 6px;
+    }
+
+    #del-name-show {
+      color: #ff6666;
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <!-- theme bar -->
+  <div id="theme-bar">
+    <div class="container d-flex align-items-center gap-2">
+      <span>🎨 Theme:</span>
+      <span class="theme-circle active" style="background-color:#2c1500;" data-bg="#1a0a00" data-navbar="#2c1500" data-accent="#e8a02a" title="Gold"></span>
+      <span class="theme-circle" style="background-color:#001a4a;" data-bg="#0a0a1a" data-navbar="#0d0d2e" data-accent="#3399ff" title="Ocean Blue"></span>
+      <span class="theme-circle" style="background-color:#003320;" data-bg="#0a1a0a" data-navbar="#0d2e0d" data-accent="#00cc66" title="Jungle Green"></span>
+      <span class="theme-circle" style="background-color:#4a0000;" data-bg="#1a000a" data-navbar="#2e0d0d" data-accent="#ff4444" title="Sunset Red"></span>
+      <span class="theme-circle" style="background-color:#2a002a;" data-bg="#100a1a" data-navbar="#1e0d2e" data-accent="#cc44cc" title="Royal Purple"></span>
+      <span id="theme-label">Gold</span>
+    </div>
+  </div>
+
+
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">🌿 Soul of Sri Lanka</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="travel-guide.html">Travel Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ajax-section">📡 Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- hero -->
+  <section class="hero">
+    <div>
+      <h1>📸 Gallery</h1>
+      <p>Discover the beauty, culture, and wonders of Sri Lanka</p>
+    </div>
+  </section>
+
+
+  <!-- promo banner -->
+  <div class="container">
+    <div id="promo-banner">
+      🇱🇰 Sri Lanka — The Pearl of the Indian Ocean
+      <p>Best visited November – April · Warm and dry season across the west and south coasts</p>
+    </div>
+  </div>
+
+
+  <!-- gallery filter btns -->
+  <section class="container my-4 text-center">
+    <h2 class="section-title">Browse the Gallery</h2><br>
+    <button class="btn btn-warning me-2 mb-2 filter-btn" data-cat="all">🌐 All</button>
+    <button class="btn btn-outline-warning me-2 mb-2 filter-btn" data-cat="heritage">🏛️ Heritage</button>
+    <button class="btn btn-outline-warning me-2 mb-2 filter-btn" data-cat="nature">🌿 Nature</button>
+    <button class="btn btn-outline-warning me-2 mb-2 filter-btn" data-cat="culture">🎭 Culture</button>
+    <button class="btn btn-outline-warning me-2 mb-2 filter-btn" data-cat="food">🍛 Food</button>
+    <button class="btn btn-secondary me-2 mb-2" disabled>Coming Soon</button>
+  </section>
+
+
+  <!-- main content -->
+  <section class="container my-4">
+    <div class="row g-4">
+
+      <!-- left gallery grid -->
+      <div class="col-lg-9">
+        <div class="row g-4" id="gallery-grid">
+
+          <div class="col-12 col-md-6 col-lg-4 gallery-col" data-cat="heritage">
+            <div class="gallery-card">
+              <img src="gallery images/sigiriya.jpg" alt="Sigiriya" />
+              <div class="card-body">
+                <h5 class="card-title">Sigiriya Rock Fortress</h5>
+                <p class="card-text">An ancient rock fortress and palace ruin in the central Matale District.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 gallery-col" data-cat="culture">
+            <div class="gallery-card">
+              <img src="gallery images/temple of the tooth.jpg" alt="Temple of the Tooth" />
+              <div class="card-body">
+                <h5 class="card-title">Temple of the Tooth</h5>
+                <p class="card-text">A sacred Buddhist temple in Kandy housing the relic of the tooth of the Buddha.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 gallery-col" data-cat="heritage">
+            <div class="gallery-card">
+              <img src="gallery images/dutch fort.jpg" alt="Galle Fort" />
+              <div class="card-body">
+                <h5 class="card-title">Galle Dutch Fort</h5>
+                <p class="card-text">A UNESCO World Heritage site and well-preserved colonial fort on the southern coast.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 gallery-col" data-cat="nature">
+            <div class="gallery-card">
+              <img src="gallery images/ravana falls.jpg" alt="Ravana Falls" />
+              <div class="card-body">
+                <h5 class="card-title">Ravana Falls</h5>
+                <p class="card-text">One of the widest waterfalls in Sri Lanka, surrounded by lush green forests.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 gallery-col" data-cat="heritage">
+            <div class="gallery-card">
+              <img src="gallery images/9arch bridge.jpg" alt="Nine Arches Bridge" />
+              <div class="card-body">
+                <h5 class="card-title">Nine Arch Bridge</h5>
+                <p class="card-text">An iconic colonial-era railway bridge in Ella, surrounded by tea plantations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 gallery-col" data-cat="culture">
+            <div class="gallery-card">
+              <img src="gallery images/dambulla cave.jpg" alt="Dambulla Cave Temple" />
+              <div class="card-body">
+                <h5 class="card-title">Dambulla Cave Temple</h5>
+                <p class="card-text">The largest and best-preserved cave temple complex in Sri Lanka.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 gallery-col" data-cat="nature">
+            <div class="gallery-card">
+              <img src="gallery images/yala.jpg" alt="Yala" />
+              <div class="card-body">
+                <h5 class="card-title">Yala National Park</h5>
+                <p class="card-text">Home to leopards, elephants and countless bird species in the wild south.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 gallery-col" data-cat="food">
+            <div class="gallery-card">
+              <img src="gallery images/cusine.jpg" alt="Sri Lankan Food" />
+              <div class="card-body">
+                <h5 class="card-title">Sri Lankan Cuisine</h5>
+                <p class="card-text">Aromatic rice and curry, hoppers, and fresh seafood that define island flavours.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- add destination form -->
+        <div id="add-dest-form">
+          <h4 class="section-title">📍 Know a Hidden Gem?</h4>
+          <p style="font-size:0.88rem; color:#d4b896; margin-bottom:16px;">Add your own destination to the gallery.</p>
+          <div class="row g-3 align-items-end">
+            <div class="col-md-4">
+              <label style="font-size:0.8rem; color:#a08060;">Destination Name</label>
+              <input type="text" id="new-card-title" placeholder="e.g. Ella Rock" />
+            </div>
+            <div class="col-md-5">
+              <label style="font-size:0.8rem; color:#a08060;">Description</label>
+              <input type="text" id="new-card-desc" placeholder="Short description..." />
+            </div>
+            <div class="col-md-3 d-flex gap-2">
+              <button class="btn btn-warning btn-sm w-100" id="add-card-btn">Add</button>
+              <button class="btn btn-outline-danger btn-sm w-100" id="remove-last-btn">✕ Remove</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- right sidebar -->
+      <div class="col-lg-3">
+
+        <!-- Quick Explore (dom traversal) -->
+        <div class="sidebar-box">
+          <h6>🗺️ Quick Explore</h6>
+          <p style="font-size:0.78rem; color:#a08060;">Click a place to see info.</p>
+          <ul class="list-unstyled mb-0" id="dest-list">
+            <li class="dest-item" data-region="West" data-desc="Famous for whale watching and surfing.">🌊 Mirissa Beach</li>
+            <li class="dest-item" data-region="Central" data-desc="Misty plateau with world's end views.">🏔️ Horton Plains</li>
+            <li class="dest-item" data-region="North" data-desc="Historic fort city with Tamil heritage.">🕌 Jaffna Fort</li>
+            <li class="dest-item" data-region="South" data-desc="Rare sea turtle nesting lagoon.">🐢 Rekawa Lagoon</li>
+            <li class="dest-item" data-region="Central" data-desc="The little England of Sri Lanka.">🍃 Nuwara Eliya</li>
+          </ul>
+          <div id="dest-info-box"></div>
+        </div>
+
+        <!-- visited list (dom attribute modification) -->
+        <div class="sidebar-box">
+          <h6>✅ My Visited List</h6>
+          <p style="font-size:0.78rem; color:#a08060;">Tap a place to mark as visited.</p>
+          <div class="visited-card" data-visited="false"><span>🏰 Sigiriya</span><span class="visit-badge">Not visited</span></div>
+          <div class="visited-card" data-visited="false"><span>⚓ Galle Fort</span><span class="visit-badge">Not visited</span></div>
+          <div class="visited-card" data-visited="false"><span>🐆 Yala Park</span><span class="visit-badge">Not visited</span></div>
+          <div class="visited-card" data-visited="false"><span>🚂 Nine Arches</span><span class="visit-badge">Not visited</span></div>
+          <div class="visited-card" data-visited="false"><span>🍃 Nuwara Eliya</span><span class="visit-badge">Not visited</span></div>
+          <p id="visited-count" style="font-size:0.8rem; color:#a08060; margin-top:10px; margin-bottom:0;">0 of 5 visited</p>
+        </div>
+
+        <!-- visitor profile (html events) -->
+        <div class="sidebar-box">
+          <h6>👤 Your Profile</h6>
+          <div id="visitor-card">
+            <div style="font-size:2rem; margin-bottom:6px;">👤</div>
+            <div class="name" id="vc-name">Traveller</div>
+            <div class="country" id="vc-country">Select your country</div>
+            <small style="color:#5a3000;">click · hover · double-click</small>
+          </div>
+          <input type="text" id="visitor-name-input" placeholder="Type your name + Enter"
+            style="background-color:#3d1f00; border:1px solid #5a3000; color:#f5e6c8; border-radius:6px; padding:8px; width:100%; margin-top:10px;" />
+          <select id="visitor-country-select"
+            style="background-color:#3d1f00; border:1px solid #5a3000; color:#f5e6c8; border-radius:6px; padding:8px; width:100%; margin-top:8px;">
+            <option value="">-- Country --</option>
+            <option>🇱🇰 Sri Lanka</option>
+            <option>🇬🇧 United Kingdom</option>
+            <option>🇩🇪 Germany</option>
+            <option>🇯🇵 Japan</option>
+            <option>🇦🇺 Australia</option>
+            <option>🇮🇳 India</option>
+            <option>🇺🇸 United States</option>
+          </select>
+          <div id="event-log">
+            <div class="log-entry"><span class="log-time">--:--</span>Waiting for interaction...</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- travel tips accordion -->
+  <section class="container my-4 mb-5">
+    <h2 class="section-title">🧳 Travel Tips</h2>
+    <div class="row g-4">
+
+      <div class="col-lg-9">
+        <div class="tip-item">
+          <div class="tip-header" data-target="#tip1"><span>🏛️ Visiting Heritage Sites</span><span class="tip-arrow">▼</span></div>
+          <div class="tip-body" id="tip1">Wear comfortable shoes for rocky terrain. Visit Sigiriya early morning to avoid crowds. Entry fees apply — carry USD or LKR cash.</div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-header" data-target="#tip2"><span>🌿 Exploring Nature</span><span class="tip-arrow">▼</span></div>
+          <div class="tip-body" id="tip2">Best time for wildlife safaris at Yala is February–June. Carry insect repellent and binoculars. Early morning gives the best leopard sightings.</div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-header" data-target="#tip3"><span>🎭 Cultural Etiquette</span><span class="tip-arrow">▼</span></div>
+          <div class="tip-body" id="tip3">Dress modestly at temples — cover shoulders and knees. Remove shoes before entering. Greet locals with "Ayubowan."</div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-header" data-target="#tip4"><span>🍛 Food &amp; Dining</span><span class="tip-arrow">▼</span></div>
+          <div class="tip-body" id="tip4">Try hoppers, kottu roti, and fresh king coconut water. Street food is safe and delicious. Tip 10% at restaurants.</div>
+        </div>
+        <div class="mt-4">
+          <button class="btn btn-outline-warning btn-sm me-2" id="promo-toggle-btn">🇱🇰 Show Travel Highlight</button>
+          <button class="btn btn-outline-success btn-sm" id="animate-btn">✨ Pulse Highlight</button>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="sidebar-box">
+          <h6>📅 Best Time to Visit</h6>
+          <p style="color:#d4b896; font-size:0.85rem;">
+            <strong style="color:#e8a02a;">West Coast</strong><br>Dec – March · Sunny &amp; Dry<br><br>
+            <strong style="color:#e8a02a;">East Coast</strong><br>May – Sep · Clear Skies<br><br>
+            <strong style="color:#e8a02a;">Hill Country</strong><br>Jan – April · Cool &amp; Fresh<br><br>
+            <strong style="color:#e8a02a;">Cultural Triangle</strong><br>Year-round
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- tables -->
+  <section class="container my-4 mb-5">
+    <h2 class="section-title">Popular Destinations</h2>
+
+    <h6 class="text-warning mt-3">Top Visited Places</h6>
+    <div class="table-responsive">
+      <table class="table my-table">
+        <thead><tr><th>#</th><th>Destination</th><th>District</th><th>Category</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Sigiriya</td><td>Matale</td><td>Heritage</td></tr>
+          <tr><td>2</td><td>Galle Fort</td><td>Galle</td><td>Colonial</td></tr>
+          <tr><td>3</td><td>Yala National Park</td><td>Hambantota</td><td>Wildlife</td></tr>
+          <tr><td>4</td><td>Adam's Peak</td><td>Nuwara Eliya</td><td>Religious</td></tr>
+          <tr><td>5</td><td>Arugam Bay</td><td>Ampara</td><td>Beach</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h6 class="text-warning mt-4">Entry Fees</h6>
+    <div class="table-responsive">
+      <table class="table my-table">
+        <thead><tr><th>Site</th><th>Local (LKR)</th><th>Foreign (USD)</th></tr></thead>
+        <tbody>
+          <tr><td>Sigiriya</td><td>200</td><td>30</td></tr>
+          <tr><td>Dambulla Cave Temple</td><td>100</td><td>15</td></tr>
+          <tr><td>Galle Fort</td><td>Free</td><td>Free</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ajax data manager -->
+  <section id="ajax-section">
+    <div class="container">
+
+      <h2 class="section-title">📡 Destinations Data Manager</h2>
+      <p style="color:#d4b896; font-size:0.88rem; margin-bottom:28px;">
+        Use these panels to read, add, and delete destinations from the server using AJAX.
+      </p>
+
+      <div class="row g-4">
+
+        <!-- read all -->
+        <div class="col-lg-3">
+          <div class="ajax-panel">
+            <h5>📋 Read All Records</h5>
+            <p>Click the button to load every destination from the server.</p>
+            <button id="btn-get-all" class="btn btn-warning btn-sm w-100 mb-2">🔄 Load All</button>
+            <button id="btn-clear-all" class="btn btn-outline-secondary btn-sm w-100">Clear</button>
+            <div class="result-box" id="result-all">Results will appear here...</div>
+          </div>
+        </div>
+
+        <!-- read one -->
+        <div class="col-lg-3">
+          <div class="ajax-panel">
+            <h5>🔍 Find One Record</h5>
+            <p>Enter a destination ID and click Fetch.</p>
+            <label>Destination ID</label>
+            <input type="number" id="search-id" placeholder="e.g. 1" min="1" />
+            <button id="btn-get-one" class="btn btn-warning btn-sm w-100 mb-2">🔎 Fetch</button>
+            <button id="btn-clear-one" class="btn btn-outline-secondary btn-sm w-100">Clear</button>
+            <div class="result-box" id="result-one">Record will appear here...</div>
+          </div>
+        </div>
+
+        <!-- add new -->
+        <div class="col-lg-3">
+          <div class="ajax-panel">
+            <h5>➕ Add New Destination</h5>
+            <p>Fill in all fields and click Save.</p>
+            <label>Name</label>
+            <input type="text" id="post-name" placeholder="e.g. Adam's Peak" />
+            <label>District</label>
+            <input type="text" id="post-district" placeholder="e.g. Nuwara Eliya" />
+            <label>Category</label>
+            <select id="post-category">
+              <option value="">-- Select --</option>
+              <option value="Heritage">Heritage</option>
+              <option value="Nature">Nature</option>
+              <option value="Culture">Culture</option>
+              <option value="Wildlife">Wildlife</option>
+              <option value="Beach">Beach</option>
+              <option value="Religious">Religious</option>
+            </select>
+            <label>Description</label>
+            <input type="text" id="post-desc" placeholder="Short description" />
+            <label>Entry Fee (USD)</label>
+            <input type="number" id="post-fee" placeholder="0" min="0" />
+            <label>Best Season</label>
+            <input type="text" id="post-season" placeholder="e.g. Nov - April" />
+            <label>Rating (1 to 5)</label>
+            <input type="number" id="post-rating" placeholder="e.g. 4.5" min="1" max="5" step="0.1" />
+            <button id="btn-post" class="btn btn-warning btn-sm w-100 mb-2">💾 Save to Server</button>
+            <button id="btn-reset-post" class="btn btn-outline-secondary btn-sm w-100">Reset Form</button>
+            <div class="result-box" id="result-post">Server response will appear here...</div>
+          </div>
+        </div>
+
+        <!-- delete -->
+        <div class="col-lg-3">
+          <div class="ajax-panel">
+            <h5>🗑️ Delete a Destination</h5>
+            <p>Step 1: Enter an ID and click Look Up.<br>Step 2: Confirm the deletion.</p>
+            <label>Destination ID</label>
+            <input type="number" id="del-id" placeholder="e.g. 3" min="1" />
+            <button id="btn-del-lookup" class="btn btn-outline-warning btn-sm w-100 mb-2">🔍 Look Up</button>
+            <div id="del-confirm-box">
+              <p>You are about to delete:</p>
+              <div id="del-name-show">—</div>
+              <div class="d-flex gap-2">
+                <button id="btn-del-confirm" class="btn btn-danger btn-sm w-100">Yes, Delete</button>
+                <button id="btn-del-cancel" class="btn btn-outline-secondary btn-sm w-100">Cancel</button>
+              </div>
+            </div>
+            <button id="btn-clear-del" class="btn btn-outline-secondary btn-sm w-100">Clear</button>
+            <div class="result-box" id="result-del">Result will appear here...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  <footer>
+    <p>🌿 Soul of Sri Lanka © 2026 | ETF – Year 1 Semester 2 | Class Task 5 – AJAX &amp; PHP</p>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script>
+  $(function() {
+    $("#result-post").text("Server response will appear here...").removeClass("ok fail");
+    $("#result-del").text("Result will appear here...").removeClass("ok fail");
+    $("#del-confirm-box").hide();
+    
+    $(".dest-item").click(function() {
+
+      $(".dest-item").removeClass("active");
+      $(this).addClass("active");
+
+      var name   = $(this).text();
+      var region = $(this).data("region");
+      var desc   = $(this).data("desc");
+
+      var itemAbove = $(this).prev().text();
+      var itemBelow = $(this).next().text();
+      if (itemAbove == "") { itemAbove = "none"; }
+      if (itemBelow == "") { itemBelow = "none"; }
+
+      $("#dest-info-box").html(
+        "<strong style='color:#e8a02a;'>" + name + "</strong> (" + region + ")<br>" +
+        "<small>" + desc + "</small><br><br>" +
+        "⬆ Above: " + itemAbove + "<br>" +
+        "⬇ Below: " + itemBelow
+      ).slideDown(300);
+
+    });
+
+
+    $("#add-card-btn").click(function() {
+
+      var title = $("#new-card-title").val();
+      var desc  = $("#new-card-desc").val();
+
+      if (title == "") {
+        alert("Please enter a destination name!");
+        return;
+      }
+
+      if (desc == "") { desc = "Hidden gem!"; }
+
+      var newCard = '<div class="col-12 col-md-6 col-lg-4 gallery-col dynamic-card">' +
+                     '<div class="gallery-card">' +
+                       '<div style="height:180px; display:flex; justify-content:center; align-items:center; font-size:3rem;">📍</div>' +
+                       '<div class="card-body">' +
+                         '<h5 class="card-title">' + title + ' <span class="new-badge">New</span></h5>' +
+                         '<p class="card-text">' + desc + '</p>' +
+                       '</div>' +
+                     '</div>' +
+                   '</div>';
+
+      $("#gallery-grid").append(newCard);
+
+      $("#new-card-title").val("");
+      $("#new-card-desc").val("");
+
+    });
+
+    $("#remove-last-btn").click(function() {
+      $(".dynamic-card").last().remove();
+    });
+
+
+    $(".visited-card").click(function() {
+
+      var currentValue = $(this).attr("data-visited");
+
+      if (currentValue == "false") {
+        $(this).attr("data-visited", "true");
+        $(this).find(".visit-badge").text("Visited");
+        $(this).find(".visit-badge").css("background-color", "#1a4a00");
+        $(this).find(".visit-badge").css("color", "#4dbb80");
+      } else {
+        $(this).attr("data-visited", "false");
+        $(this).find(".visit-badge").text("Not visited");
+        $(this).find(".visit-badge").css("background-color", "#3d1f00");
+        $(this).find(".visit-badge").css("color", "#d4b896");
+      }
+
+      var total   = $(".visited-card").length;
+      var visited = $(".visited-card[data-visited='true']").length;
+      $("#visited-count").text(visited + " of " + total + " visited");
+
+    });
+
+    $(".theme-circle").click(function() {
+
+      var bgColour     = $(this).data("bg");
+      var navbarColour = $(this).data("navbar");
+      var accentColour = $(this).data("accent");
+      var themeName    = $(this).attr("title");
+
+      $("body").css("background-color", bgColour);
+      $(".navbar").css("background-color", navbarColour);
+      $("footer").css("background-color", navbarColour);
+      $("#theme-bar").css("background-color", navbarColour);
+      $(".section-title").css("color", accentColour);
+      $(".navbar-brand").css("color", accentColour);
+
+      $(".theme-circle").removeClass("active");
+      $(this).addClass("active");
+      $("#theme-label").text(themeName);
+
+    });
+
+
+    $(".tip-header").click(function() {
+
+      var targetId = $(this).data("target");
+      var arrow    = $(this).find(".tip-arrow");
+
+      $(".tip-body").not(targetId).slideUp(250);
+      $(".tip-arrow").css("transform", "rotate(0deg)");
+
+      $(targetId).slideToggle(300);
+
+      if ($(targetId).is(":visible")) {
+        arrow.css("transform", "rotate(0deg)");
+      } else {
+        arrow.css("transform", "rotate(180deg)");
+      }
+
+    });
+
+    var bannerVisible = false;
+
+    $("#promo-toggle-btn").click(function() {
+      if (bannerVisible == false) {
+        $("#promo-banner").fadeIn(400);
+        bannerVisible = true;
+        $(this).text("🇱🇰 Hide Travel Highlight");
+      } else {
+        $("#promo-banner").fadeOut(400);
+        bannerVisible = false;
+        $(this).text("🇱🇰 Show Travel Highlight");
+      }
+    });
+
+    $("#animate-btn").click(function() {
+      if (bannerVisible == false) {
+        $("#promo-banner").fadeIn(400);
+        bannerVisible = true;
+        $("#promo-toggle-btn").text("🇱🇰 Hide Travel Highlight");
+      }
+      $("#promo-banner")
+        .animate({ paddingTop: "35px", paddingBottom: "35px" }, 200)
+        .animate({ paddingTop: "15px", paddingBottom: "15px" }, 200)
+        .animate({ paddingTop: "30px", paddingBottom: "30px" }, 150)
+        .animate({ paddingTop: "20px", paddingBottom: "20px" }, 150);
+    });
+
+    function logEvent(message) {
+      var time = new Date().toTimeString().substring(0, 5);
+      var entry = '<div class="log-entry"><span class="log-time">' + time + '</span>' + message + '</div>';
+      $("#event-log").prepend(entry);
+      $("#event-log .log-entry:gt(8)").remove();
+    }
+
+    $("#visitor-card").click(function() {
+      $(this).css("border-color", "#e8a02a");
+      setTimeout(function() { $("#visitor-card").css("border-color", "#3d1f00"); }, 500);
+      logEvent("🖱️ click");
+    });
+
+    $("#visitor-card").dblclick(function() {
+      $(this).toggleClass("text-warning");
+      logEvent("🖱️🖱️ double-click");
+    });
+
+    $("#visitor-card").mouseenter(function() {
+      $(this).css("background-color", "#3d1f00");
+      logEvent("🔵 hover in");
+    });
+
+    $("#visitor-card").mouseleave(function() {
+      $(this).css("background-color", "#2c1500");
+      logEvent("⚪ hover out");
+    });
+
+    $("#visitor-card").mousemove(function(event) {
+      var x = Math.round(event.pageX - $(this).offset().left);
+      var y = Math.round(event.pageY - $(this).offset().top);
+      if (x % 30 == 0) { logEvent("📍 move (" + x + ", " + y + ")"); }
+    });
+
+    $("#visitor-name-input").keypress(function(event) {
+      if (event.which == 13) {
+        var typedName = $(this).val();
+        if (typedName == "") { typedName = "Traveller"; }
+        $("#vc-name").text(typedName);
+        logEvent("⌨️ name: " + typedName);
+        $(this).val("");
+      }
+    });
+
+    $("#visitor-country-select").change(function() {
+      var country = $(this).val();
+      if (country == "") { country = "Select your country"; }
+      $("#vc-country").text(country);
+      logEvent("🔄 country: " + country);
+    });
+
+
+    $(".filter-btn").click(function() {
+      var cat = $(this).data("cat");
+
+      $(".filter-btn").removeClass("btn-warning").addClass("btn-outline-warning");
+      $(this).removeClass("btn-outline-warning").addClass("btn-warning");
+
+      $(".gallery-col").hide();
+
+      if (cat == "all") {
+        $(".gallery-col").show();
+      } else {
+        $(".gallery-col[data-cat='" + cat + "']").show();
+      }
+    });
+
+
+    var serverURL  = "connect.php";
+    var deleteId   = null;
+    var deleteName = null;
+
+    // get all records
+    $("#btn-get-all").click(function() {
+
+      $("#result-all").text("Loading...").removeClass("ok fail");
+
+      $.ajax({
+        url:      serverURL,
+        type:     "GET",
+        dataType: "json",
+
+        success: function(response) {
+          if (response.status == "success") {
+            var html = "<p style='color:#a08060; margin-bottom:10px;'>" + response.count + " destinations loaded:</p>";
+            for (var i = 0; i < response.data.length; i++) {
+              var d = response.data[i];
+              html += "<div style='background:#3d1f00; border-left:3px solid #e8a02a; padding:8px 10px; margin-bottom:8px; border-radius:6px;'>";
+              html += "<strong style='color:#e8a02a;'>#" + d.id + " " + d.name + "</strong><br>";
+              html += "<small style='color:#a08060;'>" + d.district + " · " + d.category + " · ⭐" + d.rating + "</small>";
+              html += "</div>";
+            }
+            $("#result-all").html(html).addClass("ok");
+          } else {
+            $("#result-all").text("Error: " + response.message).addClass("fail");
+          }
+        },
+
+        error: function() {
+          $("#result-all").text("Failed. Make sure connect.php is running on a PHP server like XAMPP.").addClass("fail");
+        }
+      });
+
+    });
+
+    $("#btn-clear-all").click(function() {
+      $("#result-all").text("Results will appear here...").removeClass("ok fail");
+    });
+
+    // get one record by id
+    $("#btn-get-one").click(function() {
+
+      var searchId = $("#search-id").val();
+
+      if (searchId == "") {
+        $("#result-one").text("Please enter an ID number first.").addClass("fail").removeClass("ok");
+        return;
+      }
+
+      $("#result-one").text("Searching for #" + searchId + "...").removeClass("ok fail");
+
+      $.ajax({
+        url:      serverURL,
+        type:     "GET",
+        data:     { id: searchId },
+        dataType: "json",
+
+        success: function(response) {
+          if (response.status == "success") {
+            var d = response.data;
+            var html = "<div style='background:#3d1f00; padding:12px; border-radius:8px;'>";
+            html += "<p style='color:#e8a02a; font-size:1rem; margin-bottom:8px;'><strong>" + d.name + "</strong></p>";
+            html += "<p style='margin:3px 0;'>🆔 ID: " + d.id + "</p>";
+            html += "<p style='margin:3px 0;'>📍 District: " + d.district + "</p>";
+            html += "<p style='margin:3px 0;'>🏷️ Category: " + d.category + "</p>";
+            html += "<p style='margin:3px 0;'>💰 Entry Fee: $" + d.entry_fee_usd + "</p>";
+            html += "<p style='margin:3px 0;'>🗓️ Best Season: " + d.best_season + "</p>";
+            html += "<p style='margin:3px 0;'>⭐ Rating: " + d.rating + "</p>";
+            html += "<p style='margin-top:8px; font-size:0.8rem; color:#d4b896;'>" + d.description + "</p>";
+            html += "</div>";
+            $("#result-one").html(html).addClass("ok");
+          } else {
+            $("#result-one").text("Not found: " + response.message).addClass("fail").removeClass("ok");
+          }
+        },
+
+        error: function() {
+          $("#result-one").text("Request failed.").addClass("fail").removeClass("ok");
+        }
+      });
+
+    });
+
+    $("#search-id").keypress(function(event) {
+      if (event.which == 13) { $("#btn-get-one").click(); }
+    });
+
+    $("#btn-clear-one").click(function() {
+      $("#result-one").text("Record will appear here...").removeClass("ok fail");
+      $("#search-id").val("");
+    });
+
+    // post a new record
+    $("#btn-post").click(function() {
+
+      var name     = $("#post-name").val().trim();
+      var district = $("#post-district").val().trim();
+      var category = $("#post-category").val();
+      var desc     = $("#post-desc").val().trim();
+      var fee      = $("#post-fee").val();
+      var season   = $("#post-season").val().trim();
+      var rating   = $("#post-rating").val();
+
+      if (name == "" || district == "" || category == "" || desc == "" || season == "" || rating == "") {
+        $("#result-post").text("❌ Please fill in all fields.").addClass("fail").removeClass("ok");
+        return;
+      }
+
+      var newDestination = {
+        name:          name,
+        district:      district,
+        category:      category,
+        description:   desc,
+        entry_fee_usd: fee || "0",
+        best_season:   season,
+        rating:        rating
+      };
+
+      // convert to a json string
+      var jsonString = JSON.stringify(newDestination);
+
+      $("#result-post").text("Saving...").removeClass("ok fail");
+
+      $.ajax({
+        url:         serverURL,
+        type:        "POST",
+        contentType: "application/json",
+        data:        jsonString,
+        dataType:    "json",
+
+        success: function(response) {
+          if (response.status == "success") {
+            var d = response.data;
+            $("#result-post").html(
+              "<p style='color:#4dbb80; margin-bottom:6px;'>✅ Saved successfully!</p>" +
+              "<p style='color:#a08060; font-size:0.8rem;'>Assigned ID: #" + d.id + " — " + d.name + "</p>"
+            ).addClass("ok");
+            // Clear the form
+            $("#post-name, #post-district, #post-desc, #post-fee, #post-season, #post-rating").val("");
+            $("#post-category").val("");
+          } else {
+            $("#result-post").text("❌ Error: " + response.message).addClass("fail").removeClass("ok");
+          }
+        },
+
+        error: function(xhr, status, error) {
+          console.error("AJAX Error:", status, error);
+          console.error("Response:", xhr.responseText);
+          $("#result-post").text("❌ Request failed. Make sure connect.php is running on a PHP server (XAMPP). Check browser console for details.").addClass("fail").removeClass("ok");
+        }
+      });
+
+    });
+
+    $("#btn-reset-post").click(function() {
+      $("#post-name, #post-district, #post-desc, #post-fee, #post-season, #post-rating").val("");
+      $("#post-category").val("");
+      $("#result-post").text("Server response will appear here...").removeClass("ok fail");
+    });
+
+    // delete a record
+
+    // look up before deleting
+    $("#btn-del-lookup").click(function() {
+
+      var searchId = $("#del-id").val();
+
+      if (searchId == "") {
+        $("#result-del").text("Please enter an ID.").addClass("fail").removeClass("ok");
+        return;
+      }
+
+      $("#del-confirm-box").hide();
+      $("#result-del").text("Looking up #" + searchId + "...").removeClass("ok fail");
+
+      $.ajax({
+        url:      serverURL,
+        type:     "GET",
+        data:     { id: searchId },
+        dataType: "json",
+
+        success: function(response) {
+          if (response.status == "success") {
+            deleteId   = response.data.id;
+            deleteName = response.data.name;
+
+            var d = response.data;
+            var html = "<div style='background:#3d1f00; padding:10px; border-radius:8px;'>";
+            html += "<strong style='color:#e8a02a;'>" + d.name + "</strong><br>";
+            html += "<small style='color:#a08060;'>" + d.district + " · " + d.category + "</small>";
+            html += "</div>";
+            $("#result-del").html(html).addClass("ok");
+
+            // Show the confirm box with the name filled in
+            $("#del-name-show").text(deleteName);
+            $("#del-confirm-box").slideDown(250);
+          } else {
+            $("#result-del").text("Not found: " + response.message).addClass("fail").removeClass("ok");
+          }
+        },
+
+        error: function() {
+          $("#result-del").text("Request failed.").addClass("fail").removeClass("ok");
+        }
+      });
+
+    });
+
+    // confirm delete
+    $("#btn-del-confirm").click(function() {
+
+      if (deleteId == null) { return; }
+
+      $("#del-confirm-box").slideUp(200);
+      $("#result-del").text("Deleting #" + deleteId + "...").removeClass("ok fail");
+
+      $.ajax({
+        url:      serverURL + "?id=" + deleteId,
+        type:     "DELETE",
+        dataType: "json",
+
+        success: function(response) {
+          if (response.status == "success") {
+            $("#result-del").html(
+              "<p style='color:#4dbb80; margin-bottom:4px;'>✅ " + response.message + "</p>" +
+              "<p style='color:#a08060; font-size:0.8rem;'>" + response.remaining + " destinations remaining.</p>"
+            ).addClass("ok");
+            deleteId   = null;
+            deleteName = null;
+            $("#del-id").val("");
+          } else {
+            $("#result-del").text("Error: " + response.message).addClass("fail").removeClass("ok");
+          }
+        },
+
+        error: function() {
+          $("#result-del").text("Delete request failed.").addClass("fail").removeClass("ok");
+        }
+      });
+
+    });
+
+    $("#btn-del-cancel").click(function() {
+      $("#del-confirm-box").slideUp(200);
+      deleteId   = null;
+      deleteName = null;
+      $("#result-del").text("Cancelled.").removeClass("ok fail");
+    });
+
+    $("#del-id").keypress(function(event) {
+      if (event.which == 13) { $("#btn-del-lookup").click(); }
+    });
+
+    $("#btn-clear-del").click(function() {
+      $("#result-del").text("Result will appear here...").removeClass("ok fail");
+      $("#del-id").val("");
+      $("#del-confirm-box").hide();
+      deleteId   = null;
+      deleteName = null;
+    });
+
+
+  });
+
+  </script>
+
+</body>
+</html>

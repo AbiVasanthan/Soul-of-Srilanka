@@ -1,0 +1,44 @@
+{
+  "sri_lanka_reviews": [
+    {
+      "id": "rev_001",
+      "name": "Alex Thompson",
+      "category": "Food",
+      "specific_item": "Kottu Roti",
+      "favourite_destination": "Galle Fort",
+      "rating": 5,
+      "comment": "Absolutely incredible street food experience! The spices were perfectly balanced and the atmosphere was vibrant.",
+      "submitted_at": "2026-04-29T10:30:00Z"
+    },
+    {
+      "id": "rev_002",
+      "name": "Maria Chen",
+      "category": "Adventure",
+      "specific_item": "Yala National Park Jeep Safari",
+      "favourite_destination": "Yala",
+      "rating": 4,
+      "comment": "Amazing wildlife sightings including leopards and elephants. The guide was knowledgeable, though it was a bit crowded.",
+      "submitted_at": "2026-04-28T15:45:00Z"
+    },
+    {
+      "id": "rev_003",
+      "name": "Devid samson",
+      "category": "Hotel",
+      "specific_item": "Heritance Kandalama",
+      "favourite_destination": "Dambulla",
+      "rating": 5,
+      "comment": "Breathtaking eco-resort seamlessly built into the rock. The infinity pool and jungle views were unforgettable.",
+      "submitted_at": "2026-04-27T09:12:00Z"
+    },
+    {
+       "id" : "rev_004",
+       "name" : "Navin ",
+       "category" : "Adventure",
+       "specific_item" : "Backpacker's Paradise",
+       "favourite_destination" : "Ella",
+       "rating" : "4",
+       "comment" : "Calm vibe and impressive climate",
+       "submitted_at" : "2026-04-30T11:25:00z"
+    }
+  ]
+}

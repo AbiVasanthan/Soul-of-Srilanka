@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide - Explore Sri Lanka</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .timeline-item {
+            padding: 20px;
+            border-left: 3px solid #0d6efd;
+            margin-left: 20px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: #0d6efd;
+            border-radius: 50%;
+            position: absolute;
+            left: -29px;
+            top: 25px;
+        }
+        .guide-card {
+            transition: transform 0.3s;;
+        }
+        .guide-card:hover {
+            transform: translateY(-5px);
+        }
+        .price-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-airplane-fill me-2"></i>Soul of Srilanka
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="destinations.html">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="travel-guide.html">Travel Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-4"><i class="bi bi-map me-3"></i>Complete Travel Guide</h1>
+                <p class="lead mb-0">Everything you need to know before visiting Sri Lanka</p>
+            </div>
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <button class="btn btn-light btn-lg me-2">
+                    <i class="bi bi-download me-2"></i>Download PDF
+                </button>
+                <button class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-printer me-2"></i>Print
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Quick Info Cards -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="card guide-card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="bi bi-calendar-check display-4 text-primary mb-3"></i>
+                        <h5 class="card-title">Best Time to Visit</h5>
+                        <p class="card-text text-muted">December to March for west coast, April to September for east coast</p>
+                        <button class="btn btn-primary btn-sm rounded-pill">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card guide-card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="bi bi-currency-dollar display-4 text-success mb-3"></i>
+                        <h5 class="card-title">Budget Guide</h5>
+                        <p class="card-text text-muted">$30-50 per day for budget travelers, $100+ for luxury</p>
+                        <button class="btn btn-success btn-sm rounded-pill">View Costs</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card guide-card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="bi bi-passport display-4 text-warning mb-3"></i>
+                        <h5 class="card-title">Visa Requirements</h5>
+                        <p class="card-text text-muted">ETA required for most nationalities, apply online before travel</p>
+                        <button class="btn btn-warning btn-sm rounded-pill">Check Visa</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card guide-card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="bi bi-shield-check display-4 text-info mb-3"></i>
+                        <h5 class="card-title">Travel Safety</h5>
+                        <p class="card-text text-muted">Generally safe destination, standard precautions advised</p>
+                        <button class="btn btn-info btn-sm rounded-pill text-white">Safety Tips</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7-Day Itinerary Timeline -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">
+            <span class="badge bg-primary me-2">Popular</span>
+            Suggested 7-Day Itinerary
+        </h2>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                
+                <!-- Day 1-2 -->
+                <div class="timeline-item bg-white p-4 rounded shadow-sm">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="images/Colombo.jpg" 
+                                 class="img-fluid rounded mb-3 mb-md-0" 
+                                 alt="Colombo">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="text-primary">Day 1-2: Colombo & Arrival</h4>
+                            <p class="text-muted mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Colombo</p>
+                            <p>Arrive at Bandaranaike International Airport. Explore Colombo's markets, visit Gangaramaya Temple, and enjoy local street food at Pettah Market.</p>
+                            <span class="badge bg-info">Accommodation: City Hotels</span>
+                            <span class="badge bg-secondary ms-2">Transport: Airport Taxi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="timeline-item bg-white p-4 rounded shadow-sm">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="images/Sigiriya.jpg" 
+                                 class="img-fluid rounded mb-3 mb-md-0" 
+                                 alt="Sigiriya">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="text-primary">Day 3: Sigiriya Rock Fortress</h4>
+                            <p class="text-muted mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Sigiriya</p>
+                            <p>Travel to Sigiriya (4 hours). Climb the ancient rock fortress, explore frescoes and mirror wall. Visit nearby Dambulla Cave Temple.</p>
+                            <span class="badge bg-warning text-dark">Entry: $30 USD</span>
+                            <span class="badge bg-secondary ms-2">Duration: 3-4 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="timeline-item bg-white p-4 rounded shadow-sm">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="images/Kandy.jpg" 
+                                 class="img-fluid rounded mb-3 mb-md-0" 
+                                 alt="Kandy">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="text-primary">Day 4: Kandy - Cultural Capital</h4>
+                            <p class="text-muted mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Kandy</p>
+                            <p>Visit Temple of the Tooth, explore botanical gardens, watch traditional Kandyan dance performance. Evening walk around Kandy Lake.</p>
+                            <span class="badge bg-success">Cultural Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="timeline-item bg-white p-4 rounded shadow-sm">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="images/nine-arches-bridge.jpg" 
+                                 class="img-fluid rounded mb-3 mb-md-0" 
+                                 alt="Nine Arches Bridge">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="text-primary">Day 5: Nine Arches Bridge & Ella</h4>
+                            <p class="text-muted mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Ella</p>
+                            <p>Scenic train ride to Ella. Visit the iconic Nine Arches Bridge, hike to Little Adam's Peak, enjoy sunset at Ravana Falls.</p>
+                            <span class="badge bg-primary">Train Journey</span>
+                            <span class="badge bg-secondary ms-2">$2-5 USD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 6-7 -->
+                <div class="timeline-item bg-white p-4 rounded shadow-sm">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="images/Beach.jpg" 
+                                 class="img-fluid rounded mb-3 mb-md-0" 
+                                 alt="Beach">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="text-primary">Day 6-7: Southern Beaches</h4>
+                            <p class="text-muted mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Mirissa/Unawatuna</p>
+                            <p>Relax on pristine beaches, whale watching in Mirissa (seasonal), snorkeling, fresh seafood, and sunset cocktails by the ocean.</p>
+                            <span class="badge bg-danger">Beach Activities</span>
+                            <span class="badge bg-secondary ms-2">Departure Day</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Transportation Tables -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Transportation Guide</h2>
+        
+        <div class="row g-4">
+            <!-- Train Schedule Table -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-train-front me-2"></i>Popular Train Routes</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Route</th>
+                                        <th>Duration</th>
+                                        <th>Price (USD)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Colombo to Kandy</td>
+                                        <td>3-4 hours</td>
+                                        <td>$2 - $10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kandy to Ella</td>
+                                        <td>6-7 hours</td>
+                                        <td>$3 - $15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colombo to Galle</td>
+                                        <td>2-3 hours</td>
+                                        <td>$2 - $8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ella to Colombo</td>
+                                        <td>9-10 hours</td>
+                                        <td>$5 - $20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bus Routes Table -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="bi bi-bus-front me-2"></i>Bus Services</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover mb-0">
+                                <thead class="table-success">
+                                    <tr>
+                                        <th>Service Type</th>
+                                        <th>Comfort</th>
+                                        <th>Price Range</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-light">
+                                        <td>Local Bus (CTB)</td>
+                                        <td><i class="bi bi-star text-warning"></i></td>
+                                        <td>$1 - $3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Private Bus</td>
+                                        <td><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i></td>
+                                        <td>$2 - $5</td>
+                                    </tr>
+                                    <tr class="table-light">
+                                        <td>AC Express</td>
+                                        <td><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i></td>
+                                        <td>$5 - $15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Luxury Coach</td>
+                                        <td><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i><i class="bi bi-star text-warning"></i></td>
+                                        <td>$10 - $25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Entry Fees Table -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0"><i class="bi bi-ticket-perforated me-2"></i>Major Attractions - Entry Fees</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead class="table-warning">
+                                    <tr>
+                                        <th>Attraction</th>
+                                        <th>Foreign Adults</th>
+                                        <th>SAARC Citizens</th>
+                                        <th>Children (Under 12)</th>
+                                        <th>Opening Hours</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Sigiriya Rock Fortress</strong></td>
+                                        <td>$30</td>
+                                        <td>$15</td>
+                                        <td>Free</td>
+                                        <td>7:00 AM - 5:30 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Temple of the Tooth, Kandy</strong></td>
+                                        <td>$10</td>
+                                        <td>$5</td>
+                                        <td>Free</td>
+                                        <td>5:30 AM - 8:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Dambulla Cave Temple</strong></td>
+                                        <td>$10</td>
+                                        <td>$5</td>
+                                        <td>Free</td>
+                                        <td>7:00 AM - 7:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Yala National Park</strong></td>
+                                        <td>$15 + Jeep $40</td>
+                                        <td>$7.50</td>
+                                        <td>Free</td>
+                                        <td>5:30 AM - 6:30 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Pinnawala Elephant Orphanage</strong></td>
+                                        <td>$25</td>
+                                        <td>$12.50</td>
+                                        <td>$12.50</td>
+                                        <td>8:30 AM - 5:30 PM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Travel Tips Accordion -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Essential Travel Tips</h2>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="travelTipsAccordion">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <i class="bi bi-cash-stack me-2 text-success"></i>Money & Currency
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#travelTipsAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Currency:</strong> Sri Lankan Rupee (LKR). 1 USD ≈ 300 LKR (approximate)</p>
+                                <ul>
+                                    <li>ATMs widely available in cities and tourist areas</li>
+                                    <li>Credit cards accepted at hotels and restaurants</li>
+                                    <li>Always carry cash for local markets and small shops</li>
+                                    <li>Tipping: 10% is customary at restaurants</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                <i class="bi bi-suitcase-lg me-2 text-primary"></i>What to Pack
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#travelTipsAccordion">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>Essentials:</h6>
+                                        <ul>
+                                            <li>Light, breathable clothing</li>
+                                            <li>Comfortable walking shoes</li>
+                                            <li>Sunscreen & hat</li>
+                                            <li>Insect repellent</li>
+                                            <li>Universal power adapter (Type D/G)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>For Temple Visits:</h6>
+                                        <ul>
+                                            <li>Clothes covering shoulders & knees</li>
+                                            <li>Scarf or shawl</li>
+                                            <li>Remove shoes & hats</li>
+                                            <li>Modest dress required</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                <i class="bi bi-wifi me-2 text-info"></i>Connectivity & SIM Cards
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#travelTipsAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Recommended Providers:</strong> Dialog, Mobitel, Hutch</p>
+                                <ul>
+                                    <li>Tourist SIM available at airport: $5-10 for 10-20GB</li>
+                                    <li>Free WiFi at most hotels and cafes</li>
+                                    <li>4G coverage good in cities, limited in rural areas</li>
+                                    <li>Need passport for SIM registration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                <i class="bi bi-heart-pulse me-2 text-danger"></i>Health & Safety
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#travelTipsAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Drink bottled or filtered water only</li>
+                                    <li>Vaccinations: Hepatitis A, Typhoid recommended</li>
+                                    <li>Malaria risk low, but use mosquito repellent</li>
+                                    <li>Emergency number: 119 (Police), 110 (Ambulance)</li>
+                                    <li>Travel insurance highly recommended</li>
+                                    <li>Pharmacies available in all major cities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                <i class="bi bi-people me-2 text-warning"></i>Local Customs & Etiquette
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#travelTipsAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Greet with "Ayubowan" (hands pressed together)</li>
+                                    <li>Remove shoes before entering temples and homes</li>
+                                    <li>Don't turn your back to Buddha statues</li>
+                                    <li>Ask permission before photographing people</li>
+                                    <li>Dress modestly, especially at religious sites</li>
+                                    <li>Public displays of affection frowned upon</li>
+                                    <li>Use right hand for eating and giving/receiving items</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Gallery with Different Styles -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Travel Essentials Gallery</h2>
+        
+        <div class="row g-4">
+            <!-- Rounded Image -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm">
+                    <img src="images/Local Food.jpg" 
+                         class="card-img-top rounded-circle mx-auto d-block mt-3" 
+                         style="width: 200px; height: 200px; object-fit: cover;" 
+                         alt="Local Food">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Local Cuisine</h5>
+                        <p class="card-text">Try rice & curry, hoppers, and kottu roti</p>
+                        <button type="button" class="btn btn-outline-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#foodGuideModal">
+    <i class="bi bi-cup-hot me-1"></i> Food Guide
+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Style -->
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm">
+                    <img src="images/Accommodation.jpg" 
+                         class="card-img-top img-thumbnail m-3" 
+                         alt="Accommodation">
+                    <div class="card-body">
+                        <h5 class="card-title">Where to Stay</h5>
+                        <p class="card-text">From budget hostels to luxury resorts</p>
+                        <div class="d-grid">
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#hotelsModal">
+                                View Hotels
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <!-- Adventure Activities Card -->
+           <div class="col-md-4">
+             <div class="card border-0 shadow-sm h-100">
+             <img src="images/adventure.jpg" 
+             class="card-img-top" 
+             alt="Adventure Activities"
+             style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+            <h5 class="card-title">Adventure Activities</h5>
+            <p class="card-text">Surfing, hiking, safari & more</p>
+            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#adventureModal">
+                Explore
+            </button>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<!-- SRI LANKA REVIEW BANNER -->
+<section class="sl-review-section">
+  <div class="sl-review-container">
+    <h2>🌿 Share Your Sri Lanka Experience</h2>
+    <form id="reviewForm" class="sl-review-form">
+      <div class="sl-form-group">
+        <label for="reviewName">Your Name</label>
+        <input type="text" id="reviewName" placeholder="e.g., Sarah M." required>
+      </div>
+
+      <div class="sl-form-row">
+        <div class="sl-form-group">
+          <label for="reviewCategory">Category</label>
+          <select id="reviewCategory" required>
+            <option value="">Select Category</option>
+            <option value="Food">🍛 Food & Cuisine</option>
+            <option value="Adventure">🏄 Adventure Activities</option>
+            <option value="Hotel">🏨 Hotels & Stays</option>
+          </select>
+        </div>
+        <div class="sl-form-group">
+          <label for="reviewItem">Specific Place / Item</label>
+          <input type="text" id="reviewItem" placeholder="e.g., Kottu Roti, Yala Safari, Heritance Kandalama" required>
+        </div>
+      </div>
+
+      <!-- ADDED: Favourite Destination Field -->
+      <div class="sl-form-group">
+        <label for="reviewDestination">Favourite Destination</label>
+        <input type="text" id="reviewDestination" placeholder="e.g., Sigiriya, Ella, Mirissa Beach" required>
+      </div>
+
+      <div class="sl-form-group">
+        <label>Rating</label>
+        <div class="sl-star-rating">
+          <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 Stars">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 Stars">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 Stars">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 Stars">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 Star">★</label>
+        </div>
+      </div>
+
+      <div class="sl-form-group">
+        <label for="reviewComment">Your Review</label>
+        <textarea id="reviewComment" rows="4" placeholder="Tell us about your experience..." required></textarea>
+      </div>
+
+      <button type="submit" id="submitReviewBtn">Submit Review ✨</button>
+    </form>
+  </div>
+
+  <div id="reviewsOutput" class="sl-reviews-output">
+    <!-- Reviews will appear here -->
+  </div>
+</section>
+
+<style>
+  :root {
+    --sl-primary: #2c5f2d;
+    --sl-secondary: #97bc62;
+    --sl-accent: #d4a373;
+    --sl-bg: #f8f9fa;
+    --sl-card: #ffffff;
+    --sl-text: #333333;
+    --sl-border: #e0e0e0;
+  }
+  .sl-review-section { padding: 50px 20px; background: var(--sl-bg); font-family: system-ui, -apple-system, sans-serif; }
+  .sl-review-container { max-width: 850px; margin: 0 auto; background: var(--sl-card); padding: 35px; border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+  .sl-review-container h2 { text-align: center; color: var(--sl-primary); margin-bottom: 25px; font-size: 1.8rem; }
+  .sl-form-group { margin-bottom: 16px; }
+  .sl-form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: var(--sl-text); font-size: 0.95rem; }
+  .sl-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sl-form-group input, .sl-form-group select, .sl-form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--sl-border); border-radius: 8px; font-size: 0.95rem; transition: border 0.3s, box-shadow 0.3s; box-sizing: border-box; }
+  .sl-form-group input:focus, .sl-form-group select:focus, .sl-form-group textarea:focus { outline: none; border-color: var(--sl-primary); box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.15); }
+  .sl-star-rating { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 6px; }
+  .sl-star-rating input { display: none; }
+  .sl-star-rating label { font-size: 32px; color: #cbd5e1; cursor: pointer; transition: color 0.2s; }
+  .sl-star-rating input:checked ~ label, .sl-star-rating label:hover, .sl-star-rating label:hover ~ label { color: #ffc107; }
+  #submitReviewBtn { width: 100%; padding: 14px; background: var(--sl-primary); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.3s, transform 0.2s; }
+  #submitReviewBtn:hover { background: #1e421f; transform: translateY(-2px); }
+  .sl-reviews-output { max-width: 850px; margin: 30px auto 0; display: grid; gap: 16px; }
+  .sl-review-card { background: var(--sl-card); padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-left: 5px solid var(--sl-accent); animation: fadeIn 0.4s ease; }
+  .sl-review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
+  .sl-review-author { font-weight: 700; color: var(--sl-primary); font-size: 1.05rem; }
+  .sl-review-category { font-size: 11px; background: var(--sl-secondary); color: white; padding: 4px 9px; border-radius: 20px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+  .sl-review-rating { color: #ffc107; font-size: 18px; margin-bottom: 6px; }
+  .sl-review-item { font-style: italic; color: #555; margin-bottom: 8px; font-size: 0.95rem; }
+  .sl-review-comment { color: var(--sl-text); line-height: 1.6; font-size: 0.98rem; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 650px) { .sl-form-row { grid-template-columns: 1fr; } .sl-review-container { padding: 20px; } }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('reviewForm');
+    const output = document.getElementById('reviewsOutput');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('reviewName').value.trim();
+      const category = document.getElementById('reviewCategory').value;
+      const item = document.getElementById('reviewItem').value.trim();
+      const destination = document.getElementById('reviewDestination').value.trim();
+      const comment = document.getElementById('reviewComment').value.trim();
+      const ratingInput = document.querySelector('input[name="rating"]:checked');
+      const rating = ratingInput ? parseInt(ratingInput.value) : 0;
+
+      if (!name || !category || !item || !destination || !comment || !rating) {
+        alert('Please fill in all fields and select a star rating.');
+        return;
+      }
+
+      const stars = '⭐'.repeat(rating);
+      const card = document.createElement('div');
+      card.className = 'sl-review-card';
+      card.innerHTML = `
+        <div class="sl-review-header">
+          <span class="sl-review-author">${name}</span>
+          <span class="sl-review-category">${category}</span>
+        </div>
+        <div class="sl-review-item">📍 ${item} &nbsp;|&nbsp; 🏝️ ${destination}</div>
+        <div class="sl-review-rating">${stars}</div>
+        <p class="sl-review-comment">${comment}</p>
+      `;
+
+      output.prepend(card);
+      form.reset();
+    });
+  });
+</script>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Explore Sri Lanka?</h2>
+        <p class="lead mb-4">Download our complete travel guide or contact us for personalized itinerary planning</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <button class="btn btn-light btn-lg px-5 me-md-3">
+                <i class="bi bi-file-earmark-pdf me-2"></i>Download Full Guide
+            </button>
+            <button class="btn btn-outline-light btn-lg px-5">
+                <i class="bi bi-chat-dots me-2"></i>Chat with Expert
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2026 Explore Sri Lanka. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Food Guide Modal -->
+<div class="modal fade" id="foodGuideModal" tabindex="-1" aria-labelledby="foodGuideModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title" id="foodGuideModalLabel">
+                    <i class="bi bi-cup-hot me-2"></i>Sri Lankan Food Guide
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm">
+                            <img src="images/rice-curry.jpg" class="card-img-top" alt="Rice and Curry" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Rice and Curry</h6>
+                                <p class="card-text small">The staple dish featuring rice with various curries, sambols, and papadums.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm">
+                            <img src="images/hoppers.jpg" class="card-img-top" alt="Hoppers" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Hoppers (Appa)</h6>
+                                <p class="card-text small">Bowl-shaped pancakes made from fermented rice flour, often served with egg.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm">
+                            <img src="images/kottu.jpg" class="card-img-top" alt="Kottu Roti" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Kottu Roti</h6>
+                                <p class="card-text small">Chopped roti stir-fried with vegetables, eggs, meat, and spices. A street food favorite!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm">
+                            <img src="images/string-hoppers.jpg" class="card-img-top" alt="String Hoppers" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">String Hoppers</h6>
+                                <p class="card-text small">Steamed rice noodle nests, typically eaten for breakfast with curry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 p-3 bg-light rounded">
+                    <h6><i class="bi bi-info-circle me-2"></i>Dining Tips:</h6>
+                    <ul class="mb-0">
+                        <li>Try local restaurants (hotels) for authentic cuisine</li>
+                        <li>Spice levels can be adjusted - ask for "mild" if needed</li>
+                        <li>Don't miss the fresh tropical fruits: mango, papaya, king coconut</li>
+                        <li>Street food is safe if it's freshly cooked and hot</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hotels Modal -->
+<div class="modal fade" id="hotelsModal" tabindex="-1" aria-labelledby="hotelsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="hotelsModalLabel">
+                    <i class="bi bi-hotel me-2"></i>Best Hotels in Sri Lanka
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Luxury Hotels -->
+                <h6 class="text-primary mb-3"><i class="bi bi-star-fill text-warning me-2"></i>Luxury Resorts</h6>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/luxury1.jpg" class="card-img-top" alt="Luxury Hotel" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Cinnamon Grand Colombo</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Colombo</p>
+                                <p class="card-text small">5-star luxury with multiple restaurants, pool, and spa facilities.</p>
+                                <span class="badge bg-primary">$150-300/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/luxury2.jpg" class="card-img-top" alt="Beach Resort" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Amanwella</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Tangalle</p>
+                                <p class="card-text small">Beachfront luxury resort with private pools and stunning ocean views.</p>
+                                <span class="badge bg-primary">$400-800/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/luxury3.jpg" class="card-img-top" alt="Hill Country Resort" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Heritance Kandalama</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Dambulla</p>
+                                <p class="card-text small">Iconic eco-resort built into the rock with jungle views.</p>
+                                <span class="badge bg-primary">$200-400/night</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mid-Range Hotels -->
+                <h6 class="text-primary mb-3"><i class="bi bi-star text-warning me-2"></i>Mid-Range Hotels</h6>
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/midrange1.jpg" class="card-img-top" alt="Boutique Hotel" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">The Fort Printers</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Galle Fort</p>
+                                <p class="card-text small">Boutique heritage hotel in the heart of Galle Fort.</p>
+                                <span class="badge bg-success">$80-150/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/midrange2.jpg" class="card-img-top" alt="Hill Country Hotel" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Earl's Regency</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Kandy</p>
+                                <p class="card-text small">Comfortable hotel with lake views and traditional hospitality.</p>
+                                <span class="badge bg-success">$60-120/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/midrange3.jpg" class="card-img-top" alt="Beach Hotel" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Jetwing Lagoon</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Negombo</p>
+                                <p class="card-text small">Beachfront property with pool and easy airport access.</p>
+                                <span class="badge bg-success">$70-130/night</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budget Options -->
+                <h6 class="text-primary mb-3"><i class="bi bi-wallet2 me-2"></i>Budget-Friendly</h6>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/budget1.jpg" class="card-img-top" alt="Hostel" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Backpacker's Paradise</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Ella</p>
+                                <p class="card-text small">Cozy hostel with dorm and private rooms, great for solo travelers.</p>
+                                <span class="badge bg-secondary">$15-40/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/budget2.jpg" class="card-img-top" alt="Guesthouse" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Beachside Guesthouse</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Mirissa</p>
+                                <p class="card-text small">Family-run guesthouse steps from the beach.</p>
+                                <span class="badge bg-secondary">$25-50/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="images/budget3.jpg" class="card-img-top" alt="Homestay" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Hill Country Homestay</h6>
+                                <p class="card-text small text-muted"><i class="bi bi-geo-alt me-1"></i>Nuwara Eliya</p>
+                                <p class="card-text small">Authentic local experience with home-cooked meals.</p>
+                                <span class="badge bg-secondary">$20-45/night</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Adventure Activities Modal -->
+<div class="modal fade" id="adventureModal" tabindex="-1" aria-labelledby="adventureModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="adventureModalLabel">
+                    <i class="bi bi-trophy me-2"></i>Adventure Activities
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="images/surfing.jpg" class="card-img-top" alt="Surfing" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title text-danger"><i class="bi bi-water me-2"></i>Surfing</h6>
+                                <p class="card-text small">Best spots: Arugam Bay (East Coast), Hikkaduwa & Weligama (South Coast). Perfect for beginners and pros!</p>
+                                <ul class="small text-muted mb-0">
+                                    <li>Board rental: $5-10/day</li>
+                                    <li>Lessons: $20-30/hour</li>
+                                    <li>Best season: April-October (East), November-March (South)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="images/hiking.jpg" class="card-img-top" alt="Hiking" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title text-success"><i class="bi bi-signpost-split me-2"></i>Hiking & Trekking</h6>
+                                <p class="card-text small">Popular trails: Adam's Peak, Little Adam's Peak (Ella), Knuckles Mountain Range, Horton Plains.</p>
+                                <ul class="small text-muted mb-0">
+                                    <li>Guide recommended for longer treks</li>
+                                    <li>Start early morning for best views</li>
+                                    <li>Bring water and snacks</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="images/safari.jpg" class="card-img-top" alt="Wildlife Safari" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title text-warning"><i class="bi bi-binoculars me-2"></i>Wildlife Safari</h6>
+                                <p class="card-text small">Top parks: Yala (leopards), Udawalawe (elephants), Minneriya (elephant gathering), Wilpattu.</p>
+                                <ul class="small text-muted mb-0">
+                                    <li>Jeep safari: $40-60</li>
+                                    <li>Park entry: $15-20</li>
+                                    <li>Best time: Early morning or late afternoon</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="images/whale-watching.jpg" class="card-img-top" alt="Whale Watching" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title text-info"><i class="bi bi-water me-2"></i>Whale Watching</h6>
+                                <p class="card-text small">Mirissa is the prime location for spotting blue whales, sperm whales, and dolphins.</p>
+                                <ul class="small text-muted mb-0">
+                                    <li>Tour cost: $30-50</li>
+                                    <li>Duration: 3-4 hours</li>
+                                    <li>Season: November-April</li>
+                                    <li>Success rate: 90%+</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="images/scuba.jpg" class="card-img-top" alt="Scuba Diving" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title text-primary"><i class="bi bi-droplet me-2"></i>Scuba Diving</h6>
+                                <p class="card-text small">Best sites: Hikkaduwa, Trincomalee, Nilaveli. See coral reefs, shipwrecks, and marine life.</p>
+                                <ul class="small text-muted mb-0">
+                                    <li>Discover dive: $40-60</li>
+                                    <li>Certification course: $350-450</li>
+                                    <li>Fun dive: $30-50</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <img src="images/rafting.jpg" class="card-img-top" alt="White Water Rafting" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title text-danger"><i class="bi bi-arrow-down-circle me-2"></i>White Water Rafting</h6>
+                                <p class="card-text small">Kitulgala is the adventure capital offering grade 2-3 rapids on Kelani River.</p>
+                                <ul class="small text-muted mb-0">
+                                    <li>Half day: $35-50</li>
+                                    <li>Includes equipment & guide</li>
+                                    <li>Also offers: Canyoning, cave exploration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 p-3 bg-light rounded">
+                    <h6><i class="bi bi-shield-check me-2"></i>Safety Tips:</h6>
+                    <ul class="mb-0 small">
+                        <li>Always use licensed operators and guides</li>
+                        <li>Check weather conditions before water activities</li>
+                        <li>Travel insurance covering adventure sports recommended</li>
+                        <li>Follow all safety instructions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    // 1. DOM Traversal
+    $(".guide-card").first().css("border", "2px solid red");
+
+    // 2. DOM Modification
+    $("h2.text-center").first().text("🌍 Updated Travel Guide");
+
+    // 3. Attribute Modification
+    $("img").first().attr("alt", "Updated Colombo Image");
+
+    // 4. CSS Manipulation
+    $(".price-tag").css({
+        "background": "green",
+        "font-size": "18px"
+    });
+
+    // 5. Effects
+    $(".guide-card").hover(function(){
+        $(this).fadeOut(200).fadeIn(200);
+    });
+
+    // 6. Events - Only for buttons that are NOT modal triggers
+    $("button:not([data-bs-toggle='modal'])").click(function(){
+        alert("Button clicked!");
+    });
+
+
+    // NEW AJAX FUNCTIONS 
+    
+    const API_URL = 'api.php';
+    
+    // 1. LOAD ALL DESTINATIONS (GET all)
+    function loadAllDestinations() {
+        $.getJSON(API_URL, function(data) {
+            renderDestinations(data);
+        }).fail(function() {
+            $('#destinations-container').html(`
+                <div class="col-12 alert alert-danger">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    Failed to load destinations. Ensure api.php and data.json are in the same folder.
+                </div>
+            `);
+        });
+    }
+    
+    // 2. RENDER DESTINATIONS TO DOM
+    function renderDestinations(destinations) {
+        if (!destinations.length) {
+            $('#destinations-container').html('<p class="text-center">No destinations found.</p>');
+            return;
+        }
+        
+        let html = '';
+        destinations.forEach(dest => {
+            const stars = '⭐'.repeat(Math.round(dest.rating));
+            html += `
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm guide-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">${dest.destination}</h5>
+                                <span class="badge bg-primary">${dest.price_range}</span>
+                            </div>
+                            <p class="text-muted small mb-2">
+                                <i class="bi bi-geo-alt me-1"></i>${dest.region}
+                            </p>
+                            <p class="card-text small">${dest.description}</p>
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <small class="text-warning">${stars} ${dest.rating}/5</small>
+                                <small class="text-success">
+                                    <i class="bi bi-calendar me-1"></i>${dest.best_time}
+                                </small>
+                                ${dest.entry_fee_usd > 0 ? `<small class="text-danger"><i class="bi bi-currency-dollar me-1"></i>$${dest.entry_fee_usd}</small>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        $('#destinations-container').html(html);
+    }
+    
+    // 3. LOAD SINGLE DESTINATION (GET by ID) - Demo function
+    function loadSingleDestination(id) {
+        $.getJSON(API_URL, {id: id}, function(data) {
+            if (data.id) {
+                alert(`Loaded: ${data.destination}\n\n${data.description}`);
+            }
+        });
+    }
+    
+    // 4. ADD NEW DESTINATION (POST)
+    $('#addDestinationForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            destination: $('input[name="destination"]').val(),
+            region: $('select[name="region"]').val(),
+            rating: parseFloat($('input[name="rating"]').val()),
+            price_range: $('select[name="price_range"]').val(),
+            best_time: $('input[name="best_time"]').val(),
+            entry_fee_usd: parseInt($('input[name="entry_fee_usd"]').val()) || 0,
+            description: $('textarea[name="description"]').val()
+        };
+        
+        $.ajax({
+            url: API_URL,
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
+            success: function(response) {
+                $('#formMessage').html(`
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle me-2"></i>Destination added successfully!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `);
+                $('#addDestinationForm')[0].reset();
+                loadAllDestinations(); // Refresh list
+            },
+            error: function(xhr) {
+                const error = xhr.responseJSON?.error || 'Failed to save destination';
+                $('#formMessage').html(`
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="bi bi-x-circle me-2"></i>${error}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `);
+            }
+        });
+    });
+    
+    // 5. INITIAL LOAD
+    loadAllDestinations();
+    
+    // Optional: Demo single record fetch on card click
+    $(document).on('click', '.guide-card', function() {
+        // Extract ID from data attribute if you add it later
+        // For now, just a demo alert
+        const name = $(this).find('.card-title').text();
+        console.log(`Card clicked: ${name}`);
+    });
+});
+</script>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

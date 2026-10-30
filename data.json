@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Sigiriya",
+    "location": "Matale",
+    "type": "Historical",
+    "bestTime": "Jan-Apr",
+    "description": "Ancient rock fortress"
+  },
+  {
+    "id": 2,
+    "name": "Ella",
+    "location": "Badulla",
+    "type": "Mountain",
+    "bestTime": "Mar-Jun",
+    "description": "Scenic hill area"
+  },
+  {
+    "id": 3,
+    "name": "Mirissa",
+    "location": "Matara",
+    "type": "Beach",
+    "bestTime": "Nov-Apr",
+    "description": "Whale watching hotspot"
+  }
+]

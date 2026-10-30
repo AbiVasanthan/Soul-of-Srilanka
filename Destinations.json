@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Sigiriya Rock Fortress",
+        "district": "Matale",
+        "category": "Heritage",
+        "description": "An ancient rock fortress and palace ruin rising 200m above the central plains.",
+        "entry_fee_usd": 30,
+        "best_season": "November - April",
+        "rating": 4.9
+    },
+    {
+        "id": 2,
+        "name": "Galle Dutch Fort",
+        "district": "Galle",
+        "category": "Heritage",
+        "description": "A UNESCO World Heritage colonial fort on the southern coast, built by the Portuguese in 1588.",
+        "entry_fee_usd": 0,
+        "best_season": "November - April",
+        "rating": 4.7
+    },
+    {
+        "id": 3,
+        "name": "Yala National Park",
+        "district": "Hambantota",
+        "category": "Nature",
+        "description": "Sri Lanka's most visited wildlife reserve, home to the world's highest density of leopards.",
+        "entry_fee_usd": 25,
+        "best_season": "February - July",
+        "rating": 4.8
+    },
+    {
+        "id": 4,
+        "name": "Temple of the Tooth",
+        "district": "Kandy",
+        "category": "Culture",
+        "description": "Sacred Buddhist temple housing the relic of the tooth of the Buddha, a UNESCO site.",
+        "entry_fee_usd": 15,
+        "best_season": "Year-round",
+        "rating": 4.8
+    },
+    {
+        "id": 5,
+        "name": "Nine Arch Bridge",
+        "district": "Badulla",
+        "category": "Heritage",
+        "description": "An iconic colonial-era railway viaduct in Ella surrounded by lush tea plantations.",
+        "entry_fee_usd": 0,
+        "best_season": "January - April",
+        "rating": 4.6
+    },
+    {
+        "id": 6,
+        "name": "Mirissa Beach",
+        "district": "Matara",
+        "category": "Nature",
+        "description": "A crescent-shaped beach famous for whale watching and stunning sunsets over the Indian Ocean.",
+        "entry_fee_usd": 0,
+        "best_season": "November - April",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "name": "Dambulla Cave Temple",
+        "district": "Matale",
+        "category": "Culture",
+        "description": "The largest and best-preserved cave temple complex in Sri Lanka with over 150 Buddha statues.",
+        "entry_fee_usd": 15,
+        "best_season": "Year-round",
+        "rating": 4.7
+    },
+    {
+        "id": 8,
+        "name": "ded",
+        "district": "ded",
+        "category": "Culture",
+        "description": "edd",
+        "entry_fee_usd": "3",
+        "best_season": "eded",
+        "rating": "2"
+    },
+    {
+        "id": 9,
+        "name": "tbh",
+        "district": "fwsa",
+        "category": "Nature",
+        "description": "scvbnm",
+        "entry_fee_usd": "74",
+        "best_season": "zxcvb",
+        "rating": "4"
+    }
+]
